@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GameVault</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+ 
+  <header>
+    <div class="logo">
+
+      <svg width="52" height="52" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoColor" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#8e6bff"/>
+            <stop offset="1" stop-color="#4a6cf7"/>
+          </linearGradient>
+        </defs>
+        <rect width="64" height="64" rx="14" fill="url(#logoColor)"/>
+        <rect x="9" y="21" width="46" height="26" rx="13" fill="white"/>
+        <rect x="17" y="31" width="12" height="4" rx="1" fill="#4a6cf7"/>
+        <rect x="21" y="27" width="4" height="12" rx="1" fill="#4a6cf7"/>
+        <circle cx="41" cy="31" r="3" fill="#ff7a45"/>
+        <circle cx="47" cy="37" r="3" fill="#ffc857"/>
+      </svg>
+
+      
+      <h1>Game<span>Vault</span></h1>
+    </div>
+
+    <input type="text" id="searchBox" placeholder="Search a game..." oninput="showGames()">
+  </header>
+ 
+  <div class="cartBar">
+    <button onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </div>
+
+ 
+  <div id="cartBox">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <p>Total: ₹<span id="total">0</span></p>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+ 
+  <div class="buttons">
+    <button onclick="setCategory('all')">All Games</button>
+    <button onclick="setCategory('video')">Video Games</button>
+    <button onclick="setCategory('outdoor')">Outdoor Games</button>
+  </div>
+
+  
+  <div id="gameList"></div>
+
+  <div id="gameDetails"></div>
+
+  <script src="project.js"></script>
+</body>
+</html>
